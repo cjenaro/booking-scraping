@@ -36,7 +36,6 @@ const extractHotels = async (browser, url) => {
       return "";
     }
   });
-  console.log("next url: ", next_url);
 
   const hotels = await page.evaluate(() =>
     Array.from(document.querySelectorAll(".sr_item")).map(item => ({
